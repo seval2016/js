@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>My Website</title>
+  </head>
+  <body>
+    <section>
+    <div class="row">
+      <div class="col-4 d-flex justify-contend-start ">
+      <input id="text" type="text" class="form-control w-50 m-1"  value="0">
+      <button id="arttir" onclick=arttir() class="btn btn-success btn-sm m-1">+</button>
+      <button id="azalt" onclick=azalt() class="btn btn-danger btn-sm m-1">-</button>
+      </div>
+      
+    </div>
+   </section>
+
+
+  <script>
+    function arttir()
+    {
+     var icerik= document.getElementById("text").value;
+      icerik=Number(icerik);
+     icerik +=1;
+     document.getElementById("text").value=icerik;
+    }
+    function azalt(){
+      var icerik= document.getElementById("text").value;
+     içerik=Number(icerik);
+     icerik -=1;
+     document.getElementById("text").value=icerik;
+
+    }
+  </script>  
+</body>
+</html>

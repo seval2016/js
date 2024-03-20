@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  /* ES5
+  function selamlama(){
+    console.log("Merhaba");
+  }*/
+
+  var selamlamaES5=function (isim){
+    console.log(`Merhaba ${isim}`);
+  }
+  selamlamaES5("Ali");
+  //ES6 - arrow function
+
+  //const selamlamaES6 = () => console.log("Merhaba ES6");
+  const selamlamaES6 = (isim) => {console.log(`Merhaba ES6 ${isim}`);}; //Birden fazla satır yazılacak ise parantez kullanılır.
+
+  selamlamaES6("Kenan");
+
+  var toplamES5=function (a,b){
+    return a+b;
+  }
+  var sonuc=toplamES5(25,68);
+  console.log(sonuc);
+
+  //const toplamES6 = (a,b) => a+b;
+  const toplamES6 = (a,b) => {return a+b}
+  const sonucES6=toplamES6(49,72);
+  console.log(sonucES6);
+
+</script>
+
+</body>
+</html>
