@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials" />
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript" />
+    <meta name="author" content="Seval Şentürk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h1>Dynamic Tabs</h1>
+          <ul>
+            <li
+              class="tab-item active"
+              target-wrapper="first-dynamic-table"
+              target-tab="home"
+            >
+              Home
+            </li>
+            <li
+              class="tab-item"
+              target-wrapper="first-dynamic-table"
+              target-tab="about"
+            >
+              About
+            </li>
+            <li
+              class="tab-item"
+              target-wrapper="first-dynamic-table"
+              target-tab="faqs"
+            >
+              FAQS
+            </li>
+            <li
+              class="tab-item"
+              target-wrapper="first-dynamic-table"
+              target-tab="contact"
+            >
+              Contact
+            </li>
+          </ul>
+          <div id="first-dynamic-table">
+            <div class="tab-content active" id="home">
+              <h2>home</h2>
+            </div>
+            <div class="tab-content" id="about">
+              <h2>about</h2>
+            </div>
+            <div class="tab-content" id="faqs">
+              <h2>faqs</h2>
+            </div>
+            <div class="tab-content" id="contact">
+              <h2>Contact</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="style.js"></script>
+  </body>
+</html>

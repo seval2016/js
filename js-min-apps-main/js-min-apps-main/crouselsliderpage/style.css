@@ -1,0 +1,13 @@
+
+.slick-carousel {
+    margin: 0 auto;
+    width: 1000px;
+  }
+  
+  .slick-slide {
+    width: 350px;
+  }
+  
+  .slick-next::before, .slick-prev::before {
+    color: rgb(59, 59, 59);
+  }
