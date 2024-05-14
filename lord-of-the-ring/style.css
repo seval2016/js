@@ -9,14 +9,14 @@ font-family: "Lora", serif;
 */
 
 body {
-  background-image: url("img/the-one-ring.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100vh;
-  box-sizing: border-box;
-  position: relative;
-  font-family: "IM Fell English SC", serif;
+    background-image: url("img/the-one-ring.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "IM Fell English SC", serif;
 }
 
 .overlay {
@@ -30,7 +30,7 @@ body {
 
 header h2{
    
-    font-size: 5rem;
+    font-size:2rem;
     text-shadow: 5px 5px 12px rgb(251 251 251);
     color: black;
     z-index: 3;
@@ -64,6 +64,11 @@ header h2{
     
 }
 
+.right-box .counter{
+ font-size: 24px;
+    
+}
+
 .radius1{
    border-top-right-radius: 15px; 
 }
@@ -81,3 +86,15 @@ header h2{
     letter-spacing: 2px;
 
  }
+
+ @media (min-width: 1024px) {
+    header h2{
+        font-size: 3rem;
+    }
+}
+
+    @media (min-width: 1280px) {
+        header h2{
+            font-size: 5rem;
+        }
+}
