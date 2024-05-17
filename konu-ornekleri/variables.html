@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--
+        Kullanıcıya geometrik şekil(üçgen,kare,daire,beşgen vs.) sorup aldığı cevaba göre kenar uzunluklarını
+         girmesini isteyen ve bu şeklin alanını ve çevresini hesaplayan bir JavaScript programı yazın.
+    -->
+
+    <script>
+
+
+        // Kullanıcıdan şekil bilgisini al
+        var shape = prompt("Lütfen bir geometrik şekil seçin (üçgen, kare, daire, beşgen):");
+
+        // Alan ve çevreyi hesaplamak için değişkenler
+        var area, perimeter;
+
+        // Şekil türüne göre işlem yap
+        switch (shape.toLowerCase()) {
+            case "üçgen":
+                // Kullanıcıdan üçgenin kenar uzunluklarını al
+                var side1 = parseFloat(prompt("Üçgenin birinci kenar uzunluğunu girin:"));
+                var side2 = parseFloat(prompt("Üçgenin ikinci kenar uzunluğunu girin:"));
+                var side3 = parseFloat(prompt("Üçgenin üçüncü kenar uzunluğunu girin:"));
+
+                // Üçgenin alanını hesapla (Heron formülü)
+                var s = (side1 + side2 + side3) / 2;
+                area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+
+                // Üçgenin çevresini hesapla
+                perimeter = side1 + side2 + side3;
+                break;
+            case "kare":
+                // Kullanıcıdan karenin bir kenar uzunluğunu al
+                var side = parseFloat(prompt("Karenin bir kenar uzunluğunu girin:"));
+
+                // Karenin alanını hesapla
+                area = side * side;
+
+                // Karenin çevresini hesapla
+                perimeter = 4 * side;
+                break;
+            case "daire":
+                // Kullanıcıdan dairenin yarıçapını al
+                var radius = parseFloat(prompt("Dairenin yarıçapını girin:"));
+
+                // Dairenin alanını hesapla
+                area = Math.PI * radius * radius;
+
+                // Dairenin çevresini hesapla
+                perimeter = 2 * Math.PI * radius;
+                break;
+            case "beşgen":
+                // Kullanıcıdan beşgenin bir kenar uzunluğunu al
+                var side = parseFloat(prompt("Beşgenin bir kenar uzunluğunu girin:"));
+
+                // Beşgenin alanını hesapla
+                area = (5 / 4) * side * side * (1 / Math.tan(Math.PI / 5));
+
+                // Beşgenin çevresini hesapla
+                perimeter = 5 * side;
+                break;
+            default:
+                alert("Geçersiz bir şekil girdiniz!");
+        }
+
+        // Sonucu ekrana yazdır
+        console.log("Seçtiğiniz " + shape + "'in alanı: " + area.toFixed(2));
+        console.log("Seçtiğiniz " + shape + "'in çevresi: " + perimeter.toFixed(2));
+
+    </script>
+</body>
+
+</html>

@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem(key, currentCount);
     }
 
-
     document.getElementById("reset").addEventListener("click", function() {
         // Tüm counter değerlerini sıfırla
         document.querySelectorAll(".counter").forEach(function(counterElement, index) {

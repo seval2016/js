@@ -1,0 +1,23 @@
+:root{
+    --color1:rgb(15,168,155);
+
+}
+
+.age-calculator .form-label{
+    color: var(--color1);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.results .display{
+    display: inline-block;
+}
+
+.results h2{
+   font-size: 2rem;
+}
+
+.results span{
+    color: var(--color1);
+    margin-right: 10px;
+}
