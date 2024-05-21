@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal sayı bulma</title>
+</head>
+
+<body>
+
+
+    <input type="number" id="txtNum">
+    <button onclick="calculate()" type="button">Asal sayı mı ?</button>
+    <br> <br>
+    <span>Sayı <em></em></span>
+
+
+
+
+
+    <script>
+        function calculate(){
+
+            let num = document.getElementById("txtNum").value;
+
+            let result = isPrimeNumber(num);
+
+            document.querySelector("em").innerHTML = result ? "Asal" : "Asal degil";
+        }
+
+
+        function isPrimeNumber(num) {
+            if (!num || isNaN(num) || num < 2) return false;
+
+            let result = true;
+
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                    break;
+                }
+            }
+            return result;
+        }
+    </script>
+</body>
+
+</html>
