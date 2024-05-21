@@ -13,23 +13,32 @@
     <input type="number" id="txtNum">
     <button onclick="calculate()" type="button">Asal sayı mı ?</button>
     <br> <br>
-    <span>Girdiğiniz sayı  <strong></strong></span>
+    <span>Girdiğiniz sayı <strong></strong></span>
 
 
 
 
 
     <script>
-        function calculate(){
 
-            let num = document.getElementById("txtNum").value;
-            let result = isPrimeNumber(num);
+        const num = document.querySelector("#txtNum")
+        function calculate() {
+            const result = isPrimeNumber(num.value);
+
+            if(result === "error"){
+                alert("Lütfen sayı giriniz");
+                num.value="";
+                num.focus();
+                return;
+            }
+
+
             document.querySelector("strong").innerHTML = result ? "Asal" : "Asal degil";
         }
 
 
         function isPrimeNumber(num) {
-            if (!num || isNaN(num) || num < 2) return false;
+            if (!num || isNaN(num) || num < 2) return "error";
 
             let result = true;
 
